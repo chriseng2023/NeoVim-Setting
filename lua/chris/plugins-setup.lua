@@ -31,7 +31,12 @@ return packer.startup(function(use)
   -- packer can manage itself
   use("wbthomason/packer.nvim")
 
+  use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
+
   use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+
+  -- essential plugins
+  use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
 
   if packer_bootstrap then
     require("packer").sync()
